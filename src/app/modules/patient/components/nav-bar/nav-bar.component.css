@@ -1,0 +1,17 @@
+.btn {
+  border: 1px solid #ffffff;
+  margin: 4px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.button-div {
+  width: 100%;
+  /* border: red 1px solid; */
+  display: flex;
+  justify-content: flex-end;
+}

@@ -1,0 +1,40 @@
+<mat-toolbar class="main-container" color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <h1 routerLink="">Dracto</h1>
+    <button mat-button [matMenuTriggerFor]="menu">Consultation</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="specs-link">Specilizations</button>
+      <button mat-menu-item>Department</button>
+    </mat-menu>
+
+    <div class="button-div">
+      <button mat-raised-button background-color="primary">Login</button>
+      <!-- <button class="btn" mat-stroked-button>Register</button> -->
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav opened="true" mode="side">
+    <mat-nav-list>
+      <a mat-list-item>Home</a>
+      <a mat-list-item>Account</a>
+
+      <a mat-list-item>About Us</a>
+
+      <a mat-list-item>Contact Us</a>
+
+      <a mat-list-item>Help</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<app-footer></app-footer>

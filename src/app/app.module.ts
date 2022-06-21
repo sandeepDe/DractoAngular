@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 // import { DoctorModule } from './modules/doctor/doctor.module';
 import { PatientModule } from './modules/patient/patient.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 // import { SpecViewComponent } from './modules/patient/components/spec-view/spec-view.component';
 
 @NgModule({
@@ -13,6 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     PatientModule,
+    HttpClientModule,
+
     AppRoutingModule,
     BrowserAnimationsModule,
   ],

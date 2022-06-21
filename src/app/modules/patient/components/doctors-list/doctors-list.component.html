@@ -1,0 +1,13 @@
+<ul class="ul-element">
+  <li class="li-element" *ngFor="let doctor of doctorsList">
+    <app-doctor-card [parentData]="doctor"></app-doctor-card>
+    <!-- {{ doctor | json }} -->
+  </li>
+</ul>
+
+<ul class="ul-element">
+  <li class="li-element" *ngFor="let doctor of doctors">
+    <app-doctor-card [parentData]="doctor"></app-doctor-card>
+    <!-- {{ doctor | json }} -->
+  </li>
+</ul>

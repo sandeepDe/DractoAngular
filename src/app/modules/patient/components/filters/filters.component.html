@@ -1,0 +1,16 @@
+<p>filters works!</p>
+<div mat-button *ngFor="let data of doctorPropArray">
+  <button (click)="getSubCategories(data)" [matMenuTriggerFor]="menu">
+    {{ data }}
+  </button>
+  <mat-menu #menu="matMenu">
+    <button
+      mat-menu-item
+      *ngFor="let subCat of subCategories"
+      routerLink="view-doctors"
+      [queryParams]="{ category: [data], subCategory: [subCat] }"
+    >
+      {{ subCat }}
+    </button>
+  </mat-menu>
+</div>

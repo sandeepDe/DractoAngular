@@ -1,0 +1,61 @@
+<!-- <div class="main-container">
+  <div *ngFor="let data of res" class="cards">
+    <div class="card card-1">
+      <div class="card__icon"><i class="fas fa-bolt"></i></div>
+      <p class="card__exit"><i class="fas fa-times"></i></p>
+      <h2 class="card__title">{{ data.doctorName }}</h2>
+      <h3 *ngFor="let spec of data.specialization">
+        {{ spec.specializationName }}
+      </h3>
+      <p>{{ data.qualification }}</p>
+      <p class="card__apply" routerLink="view-doctors/:${data.doctorId}">
+        <a class="card__link" href="#"
+          >View Details <i class="fas fa-arrow-right"></i
+        ></a>
+      </p>
+    </div>
+  </div>
+</div> -->
+<!-- 
+<div *ngFor="let data of res" class="cards">
+  <h1>
+    {{ data.doctorName }}
+  </h1>
+
+  <h3 *ngFor="let spec of data.specialization">
+    {{ spec.specializationName }}
+  </h3>
+  <button [routerLink]="['/doctor-details', data.doctorId]">
+    View Details
+  </button>
+</div> -->
+
+<div>
+  <mat-card *ngFor="let data of res" class="example-card each">
+    <mat-card-title-group>
+      <mat-card-title>{{ data.doctorName }}</mat-card-title>
+      <mat-card-subtitle *ngFor="let spec of data.specialization">{{
+        spec.specializationName
+      }}</mat-card-subtitle>
+
+      <!-- <mat-card-subtitle>
+        {{ data.doctorAddress.city }}
+      </mat-card-subtitle> -->
+    </mat-card-title-group>
+    <div>
+      {{ data.doctorAddress.city | uppercase }}
+      <!-- {{ data.doctorAddress.state }} -->
+      <!-- {{ item.state }} -->
+    </div>
+
+    <p>{{ data.gender }}</p>
+    <mat-card-content>
+      <button
+        mat-raised-button
+        [routerLink]="['/doctor-details', data.doctorId]"
+      >
+        View Details
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>

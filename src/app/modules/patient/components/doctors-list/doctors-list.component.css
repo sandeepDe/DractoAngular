@@ -1,0 +1,12 @@
+.ul-element {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: solid 1px red; */
+  flex-wrap: wrap;
+}
+
+.li-element {
+  width: 50%;
+}

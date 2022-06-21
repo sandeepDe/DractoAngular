@@ -9,5 +9,5 @@ export interface Doctor {
   gender: string;
   specialization: Specialization[];
   doctorAddress: DoctorAddress;
-  department: Department;
+  department?: Department;
 }
